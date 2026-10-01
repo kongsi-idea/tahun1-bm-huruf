@@ -1,0 +1,14 @@
+# tahun1-bm-huruf 交接
+
+- **状态**：样品阶段（2026-10-01）。第三版：按等距四线手写几何中心线（`letters.js`），笔画结构照 Azim（a/g/q 的弯接回竖线、g/y 尾巴弯左、q 尾巴右上翘、G 横折），A–Z 26 组已全部画完（2026-10-01）。粗细 W=80、格高 B=300 老师已认可；笔画外缘贴线。动画用重画子路径（不用 stroke-dasharray，Safari 会画错）。
+- **DSKP**：BM SJK Tahun 1，3.0 Kemahiran Menulis → 3.1 Asas menulis → 3.1.1 Menulis secara mekanis (i) huruf（本机 PDF `工作档案/学校/教学工作/评估与练习/DSKP/DSKP一年级国文.pdf` 第 32 页核对）。
+- **做法**：`tools/build.py` 从 `fonts/Azim-Medium.otf`（老师提供）读字形轮廓，骨架化求中心线，按 `STROKES` 定义笔顺/方向，输出 `letters.js`。页面用字形当遮罩，沿中心线揭开 → 墨迹就是字体本身。
+  - 重跑：`python3 -m venv v && v/bin/pip install scikit-image fonttools pillow numpy scipy`，再 `v/bin/python tools/build.py AaGgYy letters.js`（在 tools/ 外层跑）。
+- **已知问题／待定**：
+  - `tools/build.py`（Azim 骨架→四线缩放）试过，弯会变得不平滑，已不用；`tools/`、`fonts/` 留着备查，老师确认后移去 `待删除/`。
+  - 马来西亚官方 a/g/y 标准字形网上查不到，现按参考图（单层 a/g、直线 y、q 尾巴往右上翘）画，待老师用课本核对。
+- **介面（2026-10-01 v4）**：主页＝字母挂卡墙（三排挂绳，元音粉卡、辅音四色轮替，写完 ⭐ 存 localStorage 只限本机）；网址 `#A` 直接开某字母；写字页顶栏有全部字母、◀ ▶、键盘 ←→/Esc；完成缎带 Bagus! 出现在格子上方空白、彩带 canvas 在 svg 底下不挡字。
+- **语言**：给学生看的字全部是马来文（10-01 老师要求），笔画说明用 garis tegak／melintang／condong、lengkung、bulatan、titik、cangkuk；程式注释仍是中文。
+- **比例方案**：老师 10-01 决定维持等距四线＋笔画 80；对比图在 `docs/比例方案对比.png`，网址参数 `?xb=360&w=72` 可即时试。
+- **待老师核对的笔顺**：J（先横后竖钩）、N/M（三笔都往下）、k（2 笔：竖＋斜进斜出）、B（3 笔）、U/u/y（第 1 笔停在和右竖相接处）、i/j（先竖后点）。
+- **下一步**：老师逐字核对 → 本机实测（Safari／学校 Windows Chrome、触控屏）→ 上架点子铺（tahunN 工具部署需老师用 `!` 跑）。
