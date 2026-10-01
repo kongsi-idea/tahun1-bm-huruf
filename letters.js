@@ -132,7 +132,7 @@
     R: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
       ['Ke kanan, lengkung, kembali ke garis tegak', bump(TOP, MID, 190), [-95, 0]],
-      ['Garis condong ke bawah, ke kanan', line([0, MID], [380, BASE]), [-95, -20]],  // 从竖线和第 2 条线的交界开始，斜到底线，终点超出半圆右边
+      ['Garis condong ke bawah, ke kanan', line([0, MID], [320, BASE]), [-95, -20]],  // 从竖线和第 2 条线的交界开始，斜到底线，终点对齐半圆最右边（和 R 一样宽）
     ],
     S: [
       ['Lengkung ke kiri, kemudian lengkung ke kanan', join(arc(230, 430, 200, 130, 30, 270), arc(230, 170, 220, 130, 90, -150))],
