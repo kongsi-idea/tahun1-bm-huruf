@@ -4,3 +4,4 @@ __pycache__/
 # Azim 字体授权未确认，不公开；tools/ 是已不用的 Azim 骨架脚本
 fonts/
 tools/
+.env*
