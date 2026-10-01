@@ -477,10 +477,10 @@ async function runAuto() {
 async function stepGo(dir) {
   runId++; cancelAnim();
   if (dir > 0 && k < strokes.length) {
-    const s = strokes[k++]; strokes.forEach(x => showArrow(x, x === s)); say(s);
+    const s = strokes[k++]; strokes.forEach(x => showArrow(x, x === s)); say(s); updateCtrls();
     setDrawn(s, 0); await wait(ARROW_MS + 150); await animate(s, 650);
   } else if (dir < 0 && k > 0) {
-    const s = strokes[--k]; setDrawn(s, 0); strokes.forEach(x => showArrow(x, x === s)); say(s);
+    const s = strokes[--k]; setDrawn(s, 0); strokes.forEach(x => showArrow(x, x === s)); say(s); updateCtrls();
   } else if (dir === 0 && k > 0) {
     const s = strokes[k - 1]; setDrawn(s, 0); showArrow(s, true); await animate(s, 650);
   }
