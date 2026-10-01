@@ -10,6 +10,6 @@
 - **介面（2026-10-01 v4）**：主页＝字母挂卡墙（三排挂绳，元音粉卡、辅音四色轮替，写完 ⭐ 存 localStorage 只限本机）；网址 `#A` 直接开某字母；写字页顶栏有全部字母、◀ ▶、键盘 ←→/Esc；完成缎带 Bagus! 出现在格子上方空白、彩带 canvas 在 svg 底下不挡字。
 - **语言**：给学生看的字全部是马来文（10-01 老师要求），笔画说明用 garis tegak／melintang／condong、lengkung、bulatan、titik、cangkuk；程式注释仍是中文。
 - **比例方案**：老师 10-01 决定维持等距四线＋笔画 80；对比图在 `docs/比例方案对比.png`，网址参数 `?xb=360&w=72` 可即时试。
-- **待老师核对的笔顺**：J（先横后竖钩）、N/M（三笔都往下）、k（2 笔：竖＋斜进斜出）、B（3 笔）、U/u/y（第 1 笔停在和右竖相接处）、i/j（先竖后点）。
+- **v1.1（2026-10-01）国文老师核对后改**：e 2 画（先横后弯）；J 先竖弯钩后横；K/k 3 画、两斜线交在竖线上（k 交在第 2 条线）；M 4 画、中间尖头到底；V/v 2 画、W/w 4 画，往上的那画从底往上；大写 U 没尾巴一笔写完。N、B、i/j、y 与马来文用词老师没提，维持。
 - **已上架**（2026-10-01）：https://tahun1-bm-huruf.vercel.app （Vercel 团队 kongsi-idea，`vercel deploy --prod --yes --scope kongsi-idea` 这次 guard 没挡）；Hub 条目 v1.0 已在 kongsi-idea.vercel.app。`fonts/`、`tools/`、`docs/`、`handoff.md` 由 `.vercelignore` 排除，线上 404 已核对。
 - **下一步**：老师对课本核对笔顺与马来文用词 → 改版时记得同步 Hub（version／changelog／截图／覆盖表／tools-status）。
