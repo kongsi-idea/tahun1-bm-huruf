@@ -95,13 +95,13 @@
       ['Garis melintang di bawah', line([0, BASE], [300, BASE]), [-95, 0]],
     ],
     J: [
+      ['Garis tegak ke bawah, lengkung ke kiri', join(line([300, TOP], [300, BASE + 130]), arc(170, BASE + 130, 130, 130, 0, -165))],
       ['Garis melintang di atas', line([150, TOP], [450, TOP]), [-95, 0]],
-      ['Garis tegak ke bawah, lengkung ke kiri', join(line([300, TOP], [300, BASE + 130]), arc(170, BASE + 130, 130, 130, 0, -165)), [0, 105]],
     ],
     K: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
-      ['Garis condong ke bawah, ke kiri', line([360, TOP], [0, 230])],
-      ['Garis condong ke bawah, ke kanan', line([125, 230 + (TOP - 230) * 125 / 360], [380, BASE]), [-30, -90]],
+      ['Garis condong ke bawah, ke kiri', line([360, TOP], [0, MID])],
+      ['Garis condong ke bawah, ke kanan', line([0, MID], [380, BASE])],
     ],
     L: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
@@ -109,7 +109,8 @@
     ],
     M: [
       ['Garis tegak di kiri, ke bawah', line([0, TOP], [0, BASE])],
-      ['Condong ke bawah, kemudian condong ke atas', line([0, TOP], [240, 190], [480, TOP]), [-70, 60]],
+      ['Garis condong ke bawah', line([0, TOP], [240, BASE]), [-70, 60]],
+      ['Garis condong ke atas', line([240, BASE], [480, TOP])],
       ['Garis tegak di kanan, ke bawah', line([480, TOP], [480, BASE])],
     ],
     N: [
@@ -141,14 +142,17 @@
       ['Garis tegak ke bawah', line([210, TOP], [210, BASE]), [95, -60]],
     ],
     U: [
-      ['Garis tegak ke bawah, lengkung ke kanan', join(line([0, TOP], [0, BASE + 160]), arc(160, BASE + 160, 160, 160, 180, 348))],
-      ['Garis tegak di kanan, ke bawah', line([320, TOP], [320, BASE])],
+      ['Garis tegak ke bawah, lengkung, naik ke atas', join(line([0, TOP], [0, BASE + 160]), arc(160, BASE + 160, 160, 160, 180, 360), line([320, BASE + 160], [320, TOP]))],
     ],
     V: [
-      ['Condong ke bawah, kemudian condong ke atas', line([0, TOP], [220, BASE], [440, TOP])],
+      ['Garis condong ke bawah', line([0, TOP], [220, BASE])],
+      ['Garis condong ke atas', line([220, BASE], [440, TOP])],
     ],
     W: [
-      ['Condong ke bawah, ke atas, ke bawah, ke atas', line([0, TOP], [140, BASE], [280, TOP], [420, BASE], [560, TOP])],
+      ['Garis condong ke bawah', line([0, TOP], [140, BASE])],
+      ['Garis condong ke atas', line([140, BASE], [280, TOP])],
+      ['Garis condong ke bawah', line([280, TOP], [420, BASE])],
+      ['Garis condong ke atas', line([420, BASE], [560, TOP])],
     ],
     X: [
       ['Garis condong ke bawah, ke kanan', line([0, TOP], [420, BASE])],
@@ -167,7 +171,7 @@
     b: [['Garis tegak ke bawah', line([0, TOP], [0, BASE])], bowlR()],
     c: [['Lengkung ke kiri, ke bawah', arc(120, BCY, 120, BRY, 40, 320)]],
     d: [bowlL(), ['Garis tegak ke bawah', line([STEM, TOP], [STEM, BASE])]],
-    e: [['Garis melintang ke kanan, kemudian lengkung ke kiri', join(line([0, BCY], [250, BCY]), arc(125, BCY, 125, BRY, 0, 302))]],
+    e: [['Garis melintang ke kanan', line([0, BCY], [250, BCY])], ['Lengkung ke kiri', arc(125, BCY, 125, BRY, 0, 302), [95, 0]]],
     f: [
       ['Lengkung ke kiri, kemudian garis tegak ke bawah', join(arc(150, TOP - 80, 80 / KX, 80, 25, 180), line([150 - 80 / KX, TOP - 80], [150 - 80 / KX, BASE]))],
       ['Garis melintang ke kanan', line([0, XH], [200, XH]), [-95, 0]],
@@ -178,7 +182,8 @@
     j: [['Garis tegak ke bawah, lengkung ke kiri', hookLeft(STEM)], dot(STEM)],
     k: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
-      ['Condong ke dalam, kemudian condong ke luar', line([200, XH], [0, 140], [215, BASE])],
+      ['Garis condong ke bawah, ke kiri', line([210, XB + 170], [0, XB])],
+      ['Garis condong ke bawah, ke kanan', line([0, XB], [225, BASE])],
     ],
     l: [['Garis tegak ke bawah', line([0, TOP], [0, BASE])]],
     m: [
@@ -197,8 +202,13 @@
       ['Garis tegak ke bawah, lengkung ke kanan', join(line([0, XH], [0, BASE + 100]), arc(100, BASE + 100, 100, 100, 180, 348))],
       ['Garis tegak di kanan, ke bawah', line([STEM, XH], [STEM, BASE])],
     ],
-    v: [['Condong ke bawah, kemudian condong ke atas', line([0, XH], [130, BASE], [260, XH])]],
-    w: [['Condong ke bawah, ke atas, ke bawah, ke atas', line([0, XH], [95, BASE], [190, XH], [285, BASE], [380, XH])]],
+    v: [['Garis condong ke bawah', line([0, XH], [130, BASE])], ['Garis condong ke atas', line([130, BASE], [260, XH])]],
+    w: [
+      ['Garis condong ke bawah', line([0, XH], [95, BASE])],
+      ['Garis condong ke atas', line([95, BASE], [190, XH])],
+      ['Garis condong ke bawah', line([190, XH], [285, BASE])],
+      ['Garis condong ke atas', line([285, BASE], [380, XH])],
+    ],
     x: [
       ['Garis condong ke bawah, ke kanan', line([0, XH], [240, BASE])],
       ['Garis condong ke bawah, ke kiri', line([240, XH], [0, BASE])],
