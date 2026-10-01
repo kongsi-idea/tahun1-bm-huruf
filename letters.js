@@ -173,8 +173,8 @@
     b: [['Garis tegak ke bawah', line([0, TOP], [0, BASE])], bowlR()],
     c: [['Lengkung ke kiri, ke bawah', arc(120, BCY, 120, BRY, 40, 320)]],
     d: [bowlL(), ['Garis tegak ke bawah', line([STEM, TOP], [STEM, BASE])]],
-    // e 的横线画细一点，上下两个空洞才够大
-    e: [['Garis melintang ke kanan', line([0, BCY], [250, BCY]), null, W * 0.6], ['Lengkung ke kiri', arc(125, BCY, 125, BRY, 0, 302), [95, 0]]],
+    // e：横线画细一点、整个字瘦一点，空洞才够大，尾巴也能多绕一点
+    e: [['Garis melintang ke kanan', line([0, BCY], [216, BCY]), null, W * 0.6], ['Lengkung ke kiri', arc(108, BCY, 108, BRY, 0, 306), [95, 0]]],
     f: [
       ['Lengkung ke kiri, kemudian garis tegak ke bawah', join(arc(150, TOP - 80, 80 / KX, 80, 25, 180), line([150 - 80 / KX, TOP - 80], [150 - 80 / KX, BASE]))],
       ['Garis melintang ke kanan', line([0, XH], [200, XH]), [-95, 0]],
