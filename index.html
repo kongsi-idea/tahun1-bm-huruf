@@ -303,7 +303,7 @@ function drawPair(s, c) {
   s.setAttribute('viewBox', `0 ${-2 * GB - 20} ${w} ${2 * GB + (2 * GB - XB) + 40}`);
   drawLines(s, 10, w - 10, 1.4);
   [[U, x0], [Lw, x0 + U.adv + gap]].forEach(([G, ox]) => G.strokes.forEach(st =>
-    el('path', { d: dOf(st.pts.map(([x, y]) => [ox + x, -y])), ...ROUND, stroke: css('ink'), 'stroke-width': SW }, s)));
+    el('path', { d: dOf(st.pts.map(([x, y]) => [ox + x, -y])), ...ROUND, stroke: css('ink'), 'stroke-width': st.w || SW }, s)));
 }
 
 // —— 写字画面 ——
@@ -318,12 +318,12 @@ function build() {
   [[U, x0], [Lw, x0 + U.adv + GAP]].forEach(([G, ox], gi) => {
     G.strokes.forEach((st, si) => {
       const pts = st.pts.map(([x, y]) => [ox + x, -y]);
-      const P = poly(pts), d = dOf(pts);
-      el('path', { d, ...ROUND, stroke: '#D3C29E', 'stroke-width': SW + 8 }, ghost);
-      el('path', { d, ...ROUND, stroke: '#ECE3CF', 'stroke-width': SW }, ghost);
+      const P = poly(pts), d = dOf(pts), w = st.w || SW;
+      el('path', { d, ...ROUND, stroke: '#D3C29E', 'stroke-width': w + 8 }, ghost);
+      el('path', { d, ...ROUND, stroke: '#ECE3CF', 'stroke-width': w }, ghost);
       el('path', { d, ...ROUND, stroke: '#B9A57C', 'stroke-width': 9, 'stroke-dasharray': '4 22' }, guide);
       const c = COLORS[si % 4];
-      const p = el('path', { d, ...ROUND, stroke: css(c), 'stroke-width': SW }, ink);
+      const p = el('path', { d, ...ROUND, stroke: css(c), 'stroke-width': w }, ink);
       strokes.push({ ch: G.ch, i: si, n: G.strokes.length, name: st.name, badge: st.badge, P, r: G.r, color: c, path: p, drawn: 0, gi });
     });
   });

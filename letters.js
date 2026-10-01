@@ -1,6 +1,6 @@
 // 字母按等距四线直接画中心线，笔画结构照 Azim 字体（老师认可的写法）。y 向上。
 // 四线：第 4 线 = -B，基线 = 0，第 2 线（虚线）= B，第 1 线 = 2B。大写 2 格、小写主体 1 格、往上／往下伸 1 格；笔画外缘贴线。
-// 每一笔 = [说明, 中心线点列, 号码位置(可省)]，点列按书写方向排列。号码位置 = 相对起点的 [dx, dy]，默认放在起点后方。
+// 每一笔 = [说明, 中心线点列, 号码位置(可省), 笔画粗细(可省，默认 W)]，点列按书写方向排列。号码位置 = 相对起点的 [dx, dy]，默认放在起点后方。
 (function () {
   // 可用网址参数试不同比例：?w=笔画粗细&xb=中间格高度（大写永远 2B 高；上、下两格 = 2B - xb）
   const Q = new URLSearchParams(location.search);
@@ -173,7 +173,8 @@
     b: [['Garis tegak ke bawah', line([0, TOP], [0, BASE])], bowlR()],
     c: [['Lengkung ke kiri, ke bawah', arc(120, BCY, 120, BRY, 40, 320)]],
     d: [bowlL(), ['Garis tegak ke bawah', line([STEM, TOP], [STEM, BASE])]],
-    e: [['Garis melintang ke kanan', line([0, BCY], [250, BCY])], ['Lengkung ke kiri', arc(125, BCY, 125, BRY, 0, 302), [95, 0]]],
+    // e 的横线画细一点，上下两个空洞才够大
+    e: [['Garis melintang ke kanan', line([0, BCY], [250, BCY]), null, W * 0.6], ['Lengkung ke kiri', arc(125, BCY, 125, BRY, 0, 302), [95, 0]]],
     f: [
       ['Lengkung ke kiri, kemudian garis tegak ke bawah', join(arc(150, TOP - 80, 80 / KX, 80, 25, 180), line([150 - 80 / KX, TOP - 80], [150 - 80 / KX, BASE]))],
       ['Garis melintang ke kanan', line([0, XH], [200, XH]), [-95, 0]],
@@ -229,7 +230,7 @@
   window.GRID = { B, W, XB };
   window.LETTERS = {};
   for (const ch in D) {
-    const strokes = D[ch].map(([name, pts, badge]) => ({ name, pts, badge }));
+    const strokes = D[ch].map(([name, pts, badge, w]) => ({ name, pts, badge: badge || undefined, w }));
     // 左边对齐到 0，宽度 = 实际最右
     if (ch === ch.toLowerCase()) strokes.forEach(s => s.pts = s.pts.map(([x, y]) => [x * KX, y]));
     const xs = strokes.flatMap(s => s.pts.map(p => p[0])), x0 = Math.min(...xs);
