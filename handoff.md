@@ -11,4 +11,5 @@
 - **语言**：给学生看的字全部是马来文（10-01 老师要求），笔画说明用 garis tegak／melintang／condong、lengkung、bulatan、titik、cangkuk；程式注释仍是中文。
 - **比例方案**：老师 10-01 决定维持等距四线＋笔画 80；对比图在 `docs/比例方案对比.png`，网址参数 `?xb=360&w=72` 可即时试。
 - **待老师核对的笔顺**：J（先横后竖钩）、N/M（三笔都往下）、k（2 笔：竖＋斜进斜出）、B（3 笔）、U/u/y（第 1 笔停在和右竖相接处）、i/j（先竖后点）。
-- **下一步**：老师逐字核对 → 本机实测（Safari／学校 Windows Chrome、触控屏）→ 上架点子铺（tahunN 工具部署需老师用 `!` 跑）。
+- **已上架**（2026-10-01）：https://tahun1-bm-huruf.vercel.app （Vercel 团队 kongsi-idea，`vercel deploy --prod --yes --scope kongsi-idea` 这次 guard 没挡）；Hub 条目 v1.0 已在 kongsi-idea.vercel.app。`fonts/`、`tools/`、`docs/`、`handoff.md` 由 `.vercelignore` 排除，线上 404 已核对。
+- **下一步**：老师对课本核对笔顺与马来文用词 → 改版时记得同步 Hub（version／changelog／截图／覆盖表／tools-status）。
