@@ -184,7 +184,7 @@
     j: [['Garis tegak ke bawah, lengkung ke kiri', hookLeft(STEM)], dot(STEM)],
     k: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
-      ...(() => { const yJ = (XH + BASE) / 2, d = XH - yJ; return [
+      ...(() => { const yJ = (XH + BASE) / 2, d = 190; return [  // 起止线不变，斜线放平（约 30 度）让两画长一点
         ['Garis condong ke bawah, ke kiri', line([d, XH], [0, yJ])],
         ['Garis condong ke bawah, ke kanan', line([0, yJ], [d, BASE])]]; })(),
     ],
