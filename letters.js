@@ -55,7 +55,7 @@
     A: [
       ['Garis condong ke bawah, ke kiri', line([220, TOP], [0, BASE])],
       ['Garis condong ke bawah, ke kanan', line([220, TOP], [440, BASE])],
-      ['Garis melintang ke kanan', (() => { const y = 175, t = (y - BASE) / (TOP - BASE); return line([220 * t, y], [440 - 220 * t, y]); })()],
+      ['Garis melintang ke kanan', (() => { const y = MID, t = (y - BASE) / (TOP - BASE); return line([220 * t, y], [440 - 220 * t, y]); })()],  // 横线在第 2 条线上
     ],
     B: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
@@ -131,8 +131,8 @@
     ],
     R: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
-      ['Ke kanan, lengkung, kembali ke garis tegak', bump(TOP, 270, 200), [-95, 0]],
-      ['Garis condong ke bawah, ke kanan', line([150, 270], [380, BASE]), [-20, -95]],
+      ['Ke kanan, lengkung, kembali ke garis tegak', bump(TOP, MID, 190), [-95, 0]],
+      ['Garis condong ke bawah, ke kanan', line([100, MID], [100 + (MID - BASE), BASE]), [-20, -95]],  // 45 度，到底线停
     ],
     S: [
       ['Lengkung ke kiri, kemudian lengkung ke kanan', join(arc(230, 430, 200, 130, 30, 270), arc(230, 170, 220, 130, 90, -150))],
@@ -164,7 +164,9 @@
       ['Garis tegak ke bawah', line([210, MID], [210, BASE]), [95, -80]],
     ],
     Z: [
-      ['Garis melintang, garis condong, garis melintang', line([0, TOP], [400, TOP], [0, BASE], [400, BASE])],
+      ['Garis melintang di atas', line([0, TOP], [400, TOP])],
+      ['Garis condong ke bawah, ke kiri', line([400, TOP], [0, BASE])],
+      ['Garis melintang di bawah', line([0, BASE], [400, BASE]), [-95, 0]],
     ],
 
     a: [bowlL(), ['Garis tegak ke bawah', line([STEM, XH], [STEM, BASE])]],
@@ -182,8 +184,9 @@
     j: [['Garis tegak ke bawah, lengkung ke kiri', hookLeft(STEM)], dot(STEM)],
     k: [
       ['Garis tegak ke bawah', line([0, TOP], [0, BASE])],
-      ['Garis condong ke bawah, ke kiri', line([210, XB + 170], [0, XB])],
-      ['Garis condong ke bawah, ke kanan', line([0, XB], [225, BASE])],
+      ...(() => { const yJ = (XH + BASE) / 2, d = XH - yJ; return [
+        ['Garis condong ke bawah, ke kiri', line([d, XH], [0, yJ])],
+        ['Garis condong ke bawah, ke kanan', line([0, yJ], [d, BASE])]]; })(),
     ],
     l: [['Garis tegak ke bawah', line([0, TOP], [0, BASE])]],
     m: [
@@ -217,7 +220,11 @@
       ['Garis tegak ke bawah, lengkung ke kanan', join(line([0, XH], [0, BASE + 100]), arc(100, BASE + 100, 100, 100, 180, 348))],
       ['Garis tegak ke bawah, lengkung ke kiri', hookLeft(STEM)],
     ],
-    z: [['Garis melintang, garis condong, garis melintang', line([0, XH], [240, XH], [0, BASE], [240, BASE])]],
+    z: [
+      ['Garis melintang di atas', line([0, XH], [240, XH])],
+      ['Garis condong ke bawah, ke kiri', line([240, XH], [0, BASE])],
+      ['Garis melintang di bawah', line([0, BASE], [240, BASE]), [-95, 0]],
+    ],
   };
   window.GRID = { B, W, XB };
   window.LETTERS = {};
