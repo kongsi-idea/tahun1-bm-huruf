@@ -177,7 +177,7 @@
     e: [['Garis melintang ke kanan', line([0, BCY], [216, BCY]), null, W * 0.6], ['Lengkung ke kiri', arc(108, BCY, 108, BRY, 0, 306), [95, 0]]],
     f: [
       ['Lengkung ke kiri, kemudian garis tegak ke bawah', join(arc(150, TOP - 80, 80 / KX, 80, 25, 180), line([150 - 80 / KX, TOP - 80], [150 - 80 / KX, BASE]))],
-      ['Garis melintang ke kanan', line([0, XH], [200, XH]), [-95, 0]],
+      ['Garis melintang ke kanan', line([0, MID], [200, MID]), [-95, 0]],  // 横线中心压在第 2 条线上
     ],
     g: [bowlL(), ['Garis tegak ke bawah, lengkung ke kiri', hookLeft(STEM)]],
     h: [['Garis tegak ke bawah', line([0, TOP], [0, BASE])], ['Lengkung ke kanan, kemudian ke bawah', arch(0, 210), [-100, -10]]],
@@ -201,7 +201,7 @@
     q: [bowlL(), ['Garis tegak ke bawah, kemudian cangkuk ke kanan', line([STEM, XH], [STEM, DESC], [STEM + 75, DESC + 70])]],
     r: [['Garis tegak ke bawah', line([0, XH], [0, BASE])], ['Lengkung kecil ke kanan', arc(100, XH - ARY, 100, ARY, 165, 40), [-100, -10]]],
     s: [['Lengkung ke kiri, kemudian lengkung ke kanan', (() => { const r = (XH - BASE) / 4; return join(arc(110, XH - r, 95, r, 30, 270), arc(110, BASE + r, 105, r, 90, -150)); })()]],
-    t: [['Garis tegak ke bawah', line([75, TOP - 60 * KX], [75, BASE])], ['Garis melintang ke kanan', line([0, XH], [170, XH]), [-95, 0]]],
+    t: [['Garis tegak ke bawah', line([75, TOP], [75, BASE])], ['Garis melintang ke kanan', line([0, MID], [170, MID]), [-95, 0]]],  // 竖线从第 1 条线写起；横线中心在第 2 条线上
     u: [
       ['Garis tegak ke bawah, lengkung ke kanan', join(line([0, XH], [0, BASE + 100]), arc(100, BASE + 100, 100, 100, 180, 348))],
       ['Garis tegak di kanan, ke bawah', line([STEM, XH], [STEM, BASE])],
