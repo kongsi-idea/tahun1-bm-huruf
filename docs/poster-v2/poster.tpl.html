@@ -1,0 +1,178 @@
+<!doctype html><html lang="ms"><head><meta charset="utf-8"><title>Poster Huruf A–Z</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B4F58;--teal:#0F7C8A;--cream:#FFF4D6;--paper:#FFFDF7;--sun:#FFC93C;--coral:#F2663F;--o:#E8873D;--b:#35618C;--p:#E2647E;--g:#4E9159;--board:#2F5D50}
+*{box-sizing:border-box;margin:0}
+html{overflow:hidden;width:2400px;height:3394px}
+body{zoom:2;width:1200px;height:1697px;background:var(--cream);font-family:'Nunito',sans-serif;color:var(--ink);position:relative;overflow:hidden}
+.bg{position:absolute;inset:0;z-index:0}
+.wrap>*{flex-shrink:0}
+.wrap{position:absolute;inset:0;padding:40px 60px 40px;display:flex;flex-direction:column;gap:14px;z-index:1}
+h1,h2,.fun{font-family:'Baloo 2','Nunito',sans-serif}
+/* 顶部 */
+.crest{position:absolute;left:58px;top:30px;width:112px;height:auto;z-index:3;transform:rotate(-4deg);filter:drop-shadow(0 5px 0 rgba(11,79,88,.22))}
+.top{position:relative;height:286px}
+.banner{position:absolute;left:50%;top:0;transform:translateX(-50%) rotate(-1.6deg);background:var(--ink);color:#fff;font-weight:900;letter-spacing:.14em;font-size:21px;padding:11px 36px;border-radius:12px;box-shadow:0 6px 0 var(--sun)}
+.banner:before,.banner:after{content:"";position:absolute;top:50%;width:22px;height:22px;background:var(--sun);transform:translateY(-50%) rotate(45deg);border-radius:4px}
+.banner:before{left:-10px}.banner:after{right:-10px}
+.title{position:absolute;left:0;right:0;top:56px;text-align:center;font-family:'Baloo 2';font-weight:800;line-height:.95}
+.t1{font-size:92px;display:flex;justify-content:center;align-items:center;gap:14px}
+.tile{display:inline-flex;align-items:center;justify-content:center;width:88px;height:88px;border-radius:22px;color:#fff;font-size:76px;box-shadow:0 7px 0 rgba(0,0,0,.18);line-height:1}
+.tile.a{background:var(--o);transform:rotate(-8deg)}.tile.z{background:var(--b);transform:rotate(7deg)}
+.dash{color:var(--sun);font-size:70px;margin:0 -2px}
+.t2{font-size:86px;color:var(--teal);position:relative;display:inline-block;margin-top:2px;z-index:0}
+.t2 svg{position:absolute;left:-14px;right:-14px;bottom:2px;width:calc(100% + 28px);height:44px;z-index:-1}
+.sub{position:absolute;left:0;right:0;top:246px;text-align:center;font-weight:800;font-size:27px}
+/* 英雄区 */
+.heroRow{position:relative;display:flex;align-items:center;margin-top:16px;height:462px}
+.board{position:relative;width:690px;padding:20px;border-radius:30px;background:radial-gradient(120% 140% at 30% 0%,#3B6E60,#2F5D50 45%,#1F4238);border:5px solid var(--ink);box-shadow:0 10px 0 var(--sun);transform:rotate(-1.8deg);margin-left:-8px}
+.board img{display:block;width:100%;border-radius:18px;border:4px solid #DCC9A0}
+.tape{position:absolute;width:120px;height:34px;background:repeating-linear-gradient(135deg,#FFD66B 0 8px,#FFE7A0 8px 16px);opacity:.95;box-shadow:0 2px 3px rgba(0,0,0,.2)}
+.tape.l{top:-16px;left:30px;transform:rotate(-8deg)}.tape.r{top:-16px;right:30px;transform:rotate(7deg);background:repeating-linear-gradient(135deg,#F7A6BA 0 8px,#FBC9D6 8px 16px)}
+.mascot{position:absolute;right:-4px;top:-18px;width:330px;height:485px}
+.bubble{position:absolute;right:92px;top:-12px;background:#fff;border:4px solid var(--ink);border-radius:26px;padding:8px 20px;font-family:'Baloo 2';font-weight:800;font-size:30px;color:var(--coral);transform:rotate(4deg);z-index:3}
+.bubble:after{content:"";position:absolute;left:34px;bottom:-18px;width:26px;height:26px;background:#fff;border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:rotate(45deg) skew(10deg,10deg)}
+/* 贴纸资料 */
+.stickers{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 12px;justify-content:center;flex-wrap:nowrap}
+.st{border-radius:18px;padding:7px 18px 9px;color:#fff;box-shadow:0 6px 0 rgba(0,0,0,.16);text-align:center}
+.st small{display:block;font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.st b{display:block;font-family:'Baloo 2';font-size:25px;font-weight:800;line-height:1.1}
+.st1{background:var(--o);transform:rotate(-3deg)}.st2{background:var(--b);transform:rotate(2deg)}.st3{background:var(--p);transform:rotate(-1.5deg)}.st4{background:var(--teal);transform:rotate(1.5deg)}
+/* 目标 */
+.obj{margin-top:8px;position:relative;background:var(--sun);border:4px solid var(--ink);border-radius:30px 30px 30px 8px;padding:12px 30px 14px 112px;transform:rotate(.7deg);box-shadow:0 8px 0 var(--ink)}
+.obj h3{font-family:'Baloo 2';font-weight:800;font-size:27px;color:var(--coral);letter-spacing:.06em;text-transform:uppercase;line-height:1.1;background:#fff;display:inline-block;padding:0 14px;border-radius:12px;margin-bottom:6px}
+.obj p{font-size:25px;font-weight:800;line-height:1.28}
+.obj .ic{position:absolute;left:18px;top:50%;transform:translateY(-50%) rotate(-8deg);width:78px;height:78px}
+/* 步骤 */
+.stepsH{margin-bottom:20px!important;font-family:'Baloo 2';font-weight:800;font-size:27px;color:var(--coral);text-transform:uppercase;letter-spacing:.08em;text-align:center;margin-bottom:-4px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;margin-top:26px}
+.step{background:var(--paper);border:4px solid var(--ink);border-radius:26px;padding:32px 20px 14px;position:relative;text-align:center;box-shadow:0 7px 0 var(--ink)}
+.step:nth-child(1){transform:rotate(-1.8deg)}.step:nth-child(2){transform:rotate(1.2deg) translateY(8px)}.step:nth-child(3){transform:rotate(-1deg)}
+.num{position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:62px;height:62px;border-radius:50%;border:5px solid #fff;color:#fff;font-family:'Baloo 2';font-weight:800;font-size:38px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.step h4{font-family:'Baloo 2';font-size:28px;font-weight:800;line-height:1.05;margin-bottom:4px}
+.step p{font-size:21px;font-weight:700;line-height:1.25}
+.step svg.i{width:46px;height:46px;margin-bottom:2px}
+/* 页脚 */
+.foot{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;position:relative}
+.qrw{position:relative;transform:rotate(-3deg);background:#fff;border:4px solid var(--ink);border-radius:26px;padding:14px 14px 10px;box-shadow:0 7px 0 var(--sun);text-align:center;width:204px}
+.qrw .q{width:170px;height:170px}.qrw .q svg{width:100%;height:100%;display:block}
+.qrw b{display:block;font-family:'Baloo 2';font-weight:800;font-size:25px;line-height:1.1;margin-top:4px;color:var(--coral)}
+.qrw small{display:block;font-size:13px;font-weight:800;opacity:.75}
+.credit{flex:1;background:var(--ink);color:#fff;border-radius:28px;padding:16px 26px 16px;position:relative;transform:rotate(.8deg);box-shadow:0 7px 0 var(--coral)}
+.credit .lb{position:absolute;top:-17px;left:26px;background:var(--sun);color:var(--ink);font-family:'Baloo 2';font-weight:800;letter-spacing:.1em;font-size:19px;padding:2px 18px;border-radius:99px;text-transform:uppercase}
+.credit ul{list-style:none;padding:0;margin-top:6px;display:flex;flex-direction:column;gap:2px}
+.credit li{font-family:'Baloo 2';font-weight:700;font-size:31px;line-height:1.2;display:flex;align-items:center;gap:12px}
+.credit li:before{content:"★";color:var(--sun);font-size:24px}
+.credit .sc{margin-top:6px;font-size:21px;font-weight:800;opacity:.9;border-top:2px dashed rgba(255,255,255,.35);padding-top:7px}
+</style></head><body>
+
+<svg class="bg" viewBox="0 0 1200 1697" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="star" d="M0-26L7.5-9 26-8 12 4.5 16 23 0 13.5-16 23-12 4.5-26-8-7.5-9Z"/>
+    <path id="spark" d="M0-22Q2-2 22 0Q2 2 0 22Q-2 2-22 0Q-2-2 0-22Z"/>
+  </defs>
+  <circle cx="1130" cy="60" r="190" fill="#FFC93C" opacity=".35"/>
+  <circle cx="30" cy="1560" r="210" fill="#0F7C8A" opacity=".1"/>
+  <!-- 彩虹 -->
+  <g transform="translate(120 282)" fill="none" stroke-width="16" stroke-linecap="round" opacity=".95">
+    <path d="M-100 0A100 100 0 0 1 100 0" stroke="#F2663F"/><path d="M-80 0A80 80 0 0 1 80 0" stroke="#FFC93C"/><path d="M-60 0A60 60 0 0 1 60 0" stroke="#4E9159"/><path d="M-40 0A40 40 0 0 1 40 0" stroke="#35618C"/>
+  </g>
+  <g fill="#fff" transform="translate(120 287)"><circle cx="-92" cy="0" r="30"/><circle cx="-64" cy="-6" r="26"/><circle cx="-110" cy="6" r="22"/><circle cx="92" cy="0" r="30"/><circle cx="64" cy="-6" r="26"/><circle cx="110" cy="6" r="22"/><rect x="-110" y="0" width="220" height="30" rx="14"/></g>
+  <!-- 星星、火花 -->
+  <use href="#star" x="1050" y="250" fill="#F2663F" transform="rotate(12 1050 250)"/>
+  <use href="#star" x="1128" y="330" fill="#FFC93C" transform="scale(.7) translate(484 142)"/>
+  <use href="#spark" x="250" y="130" fill="#35618C" opacity=".8"/>
+  <use href="#spark" x="960" y="150" fill="#E2647E"/>
+  <use href="#star" x="64" y="600" fill="#FFC93C" transform="rotate(-14 64 600)"/>
+  <use href="#spark" x="1150" y="880" fill="#0F7C8A" opacity=".8"/>
+  <use href="#star" x="40" y="1100" fill="#E2647E" transform="scale(.8) translate(10 275)"/>
+  <use href="#spark" x="1150" y="1230" fill="#F2663F"/>
+  <use href="#star" x="1140" y="1500" fill="#FFC93C" transform="rotate(10 1140 1500)"/>
+  <!-- 圆点、波浪 -->
+  <g fill="#F2663F" opacity=".7"><circle cx="330" cy="40" r="7"/><circle cx="880" cy="262" r="6"/><circle cx="40" cy="880" r="8"/><circle cx="1170" cy="1130" r="7"/></g>
+  <g fill="#35618C" opacity=".6"><circle cx="1010" cy="40" r="6"/><circle cx="160" cy="1380" r="7"/><circle cx="1000" cy="1650" r="7"/></g>
+  <path d="M60 780q20-18 40 0t40 0t40 0" fill="none" stroke="#E2647E" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <path d="M1050 1060q20-18 40 0t40 0" fill="none" stroke="#0F7C8A" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+  <!-- ABC 积木 -->
+  <g font-family="Baloo 2,sans-serif" font-weight="800" font-size="52" text-anchor="middle" fill="#fff">
+    <g transform="translate(1100 150) rotate(10)"><rect x="-38" y="-38" width="76" height="76" rx="16" fill="#35618C"/><rect x="-38" y="26" width="76" height="12" rx="6" fill="#000" opacity=".15"/><text y="18">B</text></g>
+    <g transform="translate(1038 112) rotate(-12)"><rect x="-38" y="-38" width="76" height="76" rx="16" fill="#E8873D"/><text y="18">A</text></g>
+    <g transform="translate(1146 78) rotate(-5)"><rect x="-32" y="-32" width="64" height="64" rx="14" fill="#E2647E"/><text y="16" font-size="44">C</text></g>
+  </g>
+</svg>
+
+<img class="crest" src="crest.png" alt="Lencana SJK(C) Kuo Kuang 2">
+<div class="wrap">
+  <div class="top">
+    <div class="banner">BAHAN DIGITAL BAHASA MELAYU</div>
+    <div class="title">
+      <div class="t1"><span>Huruf</span><span class="tile a">A</span><span class="dash">–</span><span class="tile z">Z</span><span style="color:var(--coral)">:</span></div>
+      <div class="t2">Mari Menulis
+        <svg viewBox="0 0 400 44" preserveAspectRatio="none"><path d="M6 26Q40 6 80 24T160 22T240 26T320 20T394 24" fill="none" stroke="#FFC93C" stroke-width="22" stroke-linecap="round"/></svg></div>
+    </div>
+    <div class="sub">Belajar tulis huruf besar dan kecil mengikut tertib langkah</div>
+  </div>
+
+  <div class="heroRow">
+    <div class="board"><div class="tape l"></div><div class="tape r"></div><img src="hero.png" alt=""></div>
+    <div class="bubble">Jom menulis!</div>
+    <!-- 铅笔吉祥物 -->
+    <svg class="mascot" viewBox="0 0 340 500" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(180 250) rotate(16)">
+        <ellipse cx="0" cy="222" rx="70" ry="12" fill="#000" opacity=".12"/>
+        <rect x="-62" y="-170" width="124" height="46" rx="20" fill="#F2A0B4" stroke="#0B4F58" stroke-width="5"/>
+        <rect x="-62" y="-128" width="124" height="22" fill="#B7C3C6" stroke="#0B4F58" stroke-width="5"/>
+        <rect x="-62" y="-106" width="124" height="230" fill="#FFC93C" stroke="#0B4F58" stroke-width="5"/>
+        <rect x="-22" y="-106" width="20" height="230" fill="#FFB300" opacity=".6"/><rect x="26" y="-106" width="14" height="230" fill="#FFE17A" opacity=".8"/>
+        <path d="M-62 124L0 214L62 124Z" fill="#F6D9A8" stroke="#0B4F58" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M-22 180L0 214L22 180Q0 190-22 180Z" fill="#0B4F58"/>
+        <!-- 脸 -->
+        <g stroke="#0B4F58" stroke-width="6" stroke-linecap="round" fill="none">
+          <circle cx="-26" cy="-34" r="11" fill="#0B4F58" stroke="none"/><circle cx="26" cy="-34" r="11" fill="#0B4F58" stroke="none"/>
+          <path d="M-28 -2Q0 30 28 -2"/></g>
+        <circle cx="-23" cy="-38" r="4" fill="#fff"/><circle cx="29" cy="-38" r="4" fill="#fff"/>
+        <ellipse cx="-44" cy="-6" rx="11" ry="7" fill="#F2663F" opacity=".5"/><ellipse cx="44" cy="-6" rx="11" ry="7" fill="#F2663F" opacity=".5"/>
+        <!-- 手臂 -->
+        <path d="M-62 40Q-110 10-112 -30" fill="none" stroke="#0B4F58" stroke-width="9" stroke-linecap="round"/><circle cx="-112" cy="-34" r="15" fill="#fff" stroke="#0B4F58" stroke-width="5"/>
+        <path d="M62 56Q110 80 118 120" fill="none" stroke="#0B4F58" stroke-width="9" stroke-linecap="round"/><circle cx="118" cy="124" r="15" fill="#fff" stroke="#0B4F58" stroke-width="5"/>
+      </g>
+      <path d="M44 420q22-26 44 0t44 0" fill="none" stroke="#F2663F" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="stickers">
+    <div class="st st1"><small>Tahun / Tahap</small><b>Tahun 1</b></div>
+    <div class="st st2"><small>Kemahiran</small><b>Menulis</b></div>
+    <div class="st st3"><small>SK 3.1</small><b>Asas menulis</b></div>
+    <div class="st st4"><small>SP 3.1.1</small><b>Menulis secara mekanis: (i) huruf</b></div>
+  </div>
+
+  <div class="obj">
+    <svg class="ic" viewBox="0 0 80 80"><circle cx="40" cy="40" r="34" fill="#fff" stroke="#0B4F58" stroke-width="5"/><circle cx="40" cy="40" r="22" fill="#F2663F"/><circle cx="40" cy="40" r="10" fill="#fff"/><path d="M40 40L70 10" stroke="#0B4F58" stroke-width="5" stroke-linecap="round"/><path d="M62 8l10 0 0 10" fill="none" stroke="#0B4F58" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h3>Objektif</h3>
+    <p>Murid dapat menulis huruf besar dan huruf kecil A–Z dengan betul mengikut tertib penulisan pada empat garisan.</p>
+  </div>
+
+  <div>
+    <div class="stepsH">★ Cara Penggunaan ★</div>
+    <div class="steps">
+      <div class="step"><div class="num" style="background:var(--o)">1</div>
+        <svg class="i" viewBox="0 0 24 24" fill="#E8873D"><path d="M7 4.5v15l12-7.5z"/></svg>
+        <h4>Tonton</h4><p>Lihat huruf ditulis secara automatik.</p></div>
+      <div class="step"><div class="num" style="background:var(--b)">2</div>
+        <svg class="i" viewBox="0 0 24 24" fill="none" stroke="#35618C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h5v-5h5V8h5"/><path d="M16 5l3 3-3 3"/></svg>
+        <h4>Langkah demi langkah</h4><p>Ikut setiap garisan dan nombor tertib.</p></div>
+      <div class="step"><div class="num" style="background:var(--p)">3</div>
+        <svg class="i" viewBox="0 0 24 24" fill="none" stroke="#E2647E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 4.5l4 4L9 19l-5 1 1-5z"/><path d="M13.5 6.5l4 4"/></svg>
+        <h4>Saya tulis</h4><p>Murid menulis di atas garisan.</p></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="qrw"><div class="q">%%QR%%</div><b>Imbas QR</b><small>tahun1-bm-huruf<br>.vercel.app</small></div>
+    <div class="credit"><div class="lb">Dibina oleh</div>
+      <ul><li>Cikgu Lim Shih Eyong</li><li>Cikgu Loo Yong Quan</li><li>Cikgu Irene Wong Yew Siah</li></ul>
+      <div class="sc">SJK(C) Kuo Kuang 2, Johor Bahru</div></div>
+  </div>
+</div>
+</body></html>

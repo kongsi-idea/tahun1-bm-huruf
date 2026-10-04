@@ -13,4 +13,5 @@
 - **彩带画在 canvas 上、放在 svg 底下**：老师要求庆祝粒子不能挡字。
 - **介面文字全部马来文**（老师要求），给 7 岁小孩用短句；程式注释用中文。
 - **Azim 字体档不公开**：授权未确认，`fonts/`、`tools/` 在 `.gitignore`／`.vercelignore`，线上 404 已核对。
+- **2026-10-05 做了 DSKP 数码教材海报**（`docs/poster-v2/`，`python3 build.py` 重生；`docs/` 已在 `.vercelignore`，不上线）：HTML→PNG 2400×3394，不用 GPT 生图，因为通告资料要逐字对。**示范图用线上工具 Aa 动画播完的真实截图**（`hero.png`，老师要求用网址真实的字和颜色），不要改回手画；QR 指向线上网址；校徽取自 `kk2-selamat/public/lencana-480.png`。SK 3.1「Asas menulis」／SP 3.1.1「Menulis secara mekanis (i) huruf」照 DSKP 原文。署名三位：Cikgu Lim Shih Eyong、Cikgu Loo Yong Quan、Cikgu Irene Wong Yew Siah（老师指定，学校 SJK(C) Kuo Kuang 2）。配色是海报自己定的（深青／暖黄／珊瑚），笔画色用工具的虎斑橘／靛蓝／珊瑚粉。
 - 部署：`vercel deploy --prod --yes --scope kongsi-idea`；改版后 Hub 要同步（见 `../agents.md` 的 Hub 五步）。
