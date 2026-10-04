@@ -22,5 +22,5 @@
 - 马来文笔画说明用词（cangkuk 等）国文老师没逐条回覆，暂维持。
 
 ## 🕐 最后更新
-2026-10-05 · Claude Code @ yquanloo Mac · Git：待推（海报源码＋文档）
+2026-10-05 · Claude Code @ yquanloo Mac · Git：✅ 已推（8d49f41）
 - 注意：`docs/poster-huruf-az.png` 是别处放进来的未跟踪档案，不是这次生成的，没动它。
