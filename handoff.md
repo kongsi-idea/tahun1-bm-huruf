@@ -3,6 +3,7 @@
 > 专案背景与关键决定见 `agents.md`，这里只放「现在停在哪」。
 
 ## ⏯️ 目前做到哪
+- 2026-10-05 上午：海报文字按老师给的原文改 4 处（副标语／Langkah demi langkah 说明／第 3 步改「Saya menulis」+「pada garis empat」／Objektif 结尾），已重生 `poster-v2.png`，同步覆盖 `docs/poster-huruf-az-v2.png`。第 3 步说明「empat.」掉到第二行单独一词，已问老师要不要调，未回覆。
 - 2026-10-05：小写 f、t 笔画调整（f 横线、t 竖线起笔，commit `3d0c44f`），已推并 `vercel deploy --prod` 上线，线上 `letters.js` 已验到新写法。Hub 未同步（只改字形）。
 - 同日做了 DSKP 数码教材海报 v2（`docs/poster-v2/poster-v2.png`，源码可重生），老师还没说定稿，未对外发。
 - 前情：v1.3 已上线（2026-10-01），Hub 已同步 v1.3。
@@ -12,7 +13,7 @@
 - 过程：v1.0 首次上架 → v1.1/v1.2 国文老师两轮核对笔顺 → v1.3 k、R、e 字形微调（同日）。
 
 ## ➡️ 下一步
-0. 海报：等老师看过定稿；要改版面改 `docs/poster-v2/poster.tpl.html` 后跑 `build.py`。
+0. 海报：等老师回覆「empat.」断行要不要调、并看过定稿；要改版面改 `docs/poster-v2/poster.tpl.html` 后跑 `build.py`。
 1. 学校 Windows 电脑（Chrome）与课室一体机触控实测。
 2. 问老师：大写 P 的半圆（停在 y=270）要不要跟 R 一样收在第 2 条线。
 3. `tools/`、`fonts/`（Azim 版遗留）老师确认不要后可搬 `~/Documents/待删除/`。
@@ -22,5 +23,5 @@
 - 马来文笔画说明用词（cangkuk 等）国文老师没逐条回覆，暂维持。
 
 ## 🕐 最后更新
-2026-10-05 · Claude Code @ yquanloo Mac · Git：✅ 已推（8d49f41）
-- 注意：`docs/poster-huruf-az.png` 是别处放进来的未跟踪档案，不是这次生成的，没动它。
+2026-10-05 · Claude Code @ yquanloo Mac · Git：待推
+- `docs/poster-huruf-az-v2.png`（老师发来的那张，已被新版覆盖）未跟踪，没提交；`poster.html` 是 build 中间产物，没提交。
